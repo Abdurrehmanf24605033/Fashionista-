@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Collection - Unicone Garments</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to External CSS -->
+    <style>
+           /* General Styles */
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b0cfd5;
+            color: #333;
+        }
+
+ /* Header Section */
+        header {
+            background-color: #153b42;
+            color: white;
+            width: 100%;
+            font-style: italic;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; /* Increased height */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.5s ease;
+            
+        }
+
+        header:hover {
+            height: 100px; /* Increased height on hover */
+            padding: 20px 20px; /* Adjust padding to match height */
+        }
+
+        header .logo img {
+            width: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        header:hover .logo img {
+            transform: scale(1.2);
+        }
+
+        header nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        header nav ul li {
+            position: relative;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: all 0.6s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #40818e;
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+/* Hero Section */
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+     position: relative;
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full viewport height */
+    background-image: url('https://i.pinimg.com/originals/d2/ee/69/d2ee69f49bb0ed62d08c130b64b87e8a.gif'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center align the text */
+    color: white; /* Make text stand out against the background */
+    padding: 20px
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Products Section */
+.products {
+    padding: 20px;
+}
+
+.products h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+.product-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0.1px 0.1px 4px #000000;
+   
+}
+
+.product-box img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product-box h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-box p {
+    color: #777;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.product-box button {
+    background-color: #0a505a ;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-box button:hover {
+    background-color: #0a505a ;
+   box-shadow: 0 0 30px 15px rgba(0, 150, 255, 0.7);
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
+/* Footer Section */
+footer {
+    background-color: #153b42;
+    color: white;
+    text-align: center;
+    width: 100vw; /* 100% of the viewport width */
+    padding: 0px 0;
+    position: relative; /* Default positioning */
+    margin-top: 20px;
+    box-sizing: border-box; /* Includes padding and border in width */
+}
+
+/* Ensure body does not add margins */
+body {
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background-color: #153b42;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+        }
+
+        .share-btn {
+            position: absolute;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid rgba(128, 128, 128, 0.705);
+            border-radius: 50%;
+            transition: .2s ease-in-out;
+            scale: .8;
+            padding: 10px;
+            width: 30px;
+            height: 30px;
+            z-index: 10;
+        }
+
+        .share-btn:hover {
+            background: #f1f1f1;
+            scale: .9;
+        }
+
+        .up {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5em;
+        }
+
+        .down {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5em;
+        }
+
+        .card1 {
+            width: 90px;
+            height: 90px;
+            outline: none;
+            border: none;
+            background: white;
+            border-radius: 90px 5px 5px 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: 300ms cubic-bezier(0.73, -0.18, 0.02, 1.46);
+        }
+
+        .card1[data-toggle1="true"] {
+            transform: translateY(50px) translateX(60px) scale(0);
+        }
+
+        .card2[data-toggle2="true"] {
+            transform: translateY(50px) translateX(-60px) scale(0);
+        }
+
+        .card3[data-toggle3="true"] {
+            transform: translateY(-50px) translateX(60px) scale(0);
+        }
+
+        .card4[data-toggle4="true"] {
+            transform: translateY(-50px) translateX(-60px) scale(0);
+        }
+
+        .instagram {
+            margin-top: 1.5em;
+            margin-left: 1.2em;
+            fill: #cc39a4;
+        }
+
+        .card2 {
+            width: 90px;
+            height: 90px;
+            outline: none;
+            border: none;
+            background: white;
+            border-radius: 5px 90px 5px 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: 300ms cubic-bezier(0.76, -0.19, 0.15, 1.17);
+
+        }
+
+        .twitter {
+            margin-top: 1.5em;
+            margin-left: -.9em;
+            fill: #03A9F4;
+        }
+
+        .card3 {
+            width: 90px;
+            height: 90px;
+            outline: none;
+            border: none;
+            background: white;
+            border-radius:
+                5px 5px 5px 90px;
+            box-shadow:
+                rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: 300ms cubic-bezier(0.72,
+                    -0.26, 0.02, 1.46);
+        }
+
+        .github {
+            margin-top: -.6em;
+            margin-left: 1.2em;
+        }
+
+        .card4 {
+            width: 90px;
+            height: 90px;
+            outline: none;
+            border: none;
+            background: white;
+            border-radius: 5px 5px 90px 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            transition: 300ms cubic-bezier(1, -0.31, 0.02, 1.46);
+
+        }
+
+        .discord {
+            margin-top: -.9em;
+            margin-left: -1.2em;
+            fill: #8c9eff;
+        }
+
+        .card1:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: #cc39a4;
+        }
+
+        .card1:hover .instagram {
+            fill: white;
+        }
+
+        .card2:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: #03A9F4;
+        }
+
+        .card2:hover .twitter {
+            fill: white;
+        }
+
+        .card3:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: rgb(39, 39, 39);
+        }
+
+        .card3:hover .github {
+            fill: white;
+        }
+
+        .card4:hover {
+            cursor: pointer;
+            scale: 1.1;
+            background-color: #8c9eff;
+        }
+
+        .card4:hover .discord {
+            fill: white;
+        }
+
+
+        /* -- External Social Link CSS Styles -- */
+
+        #source-link {
+            top: 120px;
+        }
+
+        #source-link>i {
+            color: rgb(94, 106, 210);
+        }
+
+        #yt-link {
+            top: 65px;
+        }
+
+        #yt-link>i {
+            color: rgb(219, 31, 106);
+
+        }
+
+        #Fund-link {
+            top: 10px;
+        }
+
+        #Fund-link>i {
+            color: rgb(255, 251, 0);
+
+        }
+
+        .meta-link {
+            align-items: center;
+            backdrop-filter: blur(3px);
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: inline-flex;
+            gap: 5px;
+            left: 10px;
+            padding: 10px 20px;
+            position: fixed;
+            text-decoration: none;
+            transition: background-color 600ms, border-color 600ms;
+            z-index: 10000;
+        }
+
+        .meta-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .meta-link>i,
+        .meta-link>span {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .meta-link>span {
+            color: white;
+            font-family: "Rubik", sans-serif;
+            transition: color 600ms;
+        }
+footer {
+    background-color: #153b42;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .product-box {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="https://i.pinimg.com/originals/3c/96/d4/3c96d4bd9da025d953c69ee45a7329c4.gif" id="img" style="width: 125px; height: 94px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Children</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+       <img src="https://i.pinimg.com/originals/d2/ee/69/d2ee69f49bb0ed62d08c130b64b87e8a.gif" id="img" style="width: 125px; height: 63px;">
+    </div>
+
+    <!-- Product Categories Section -->
+    <section id="products" class="products">
+        <!-- 3-Piece Suits -->
+        <h3>3-Piece Suits</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" src="https://tse3.mm.bing.net/th?id=OIP.To8Y80QGJ2RtuQXAI7wDMwHaHa&amp;pid=Api&amp;P=0&amp;h=220" id="img" style="width: 417px; height: 417px;"  alt="Suit 1">
+                <h4>Classic Black Suit</h4>
+                <p>$120</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class=""  alt="" style="width: 183.2px; height: 180px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://tse3.mm.bing.net/th?id=OIP.CgmGjXxNOBgyiQCFDZEPugHaHf&amp;pid=Api&amp;P=0&amp;h=220" id="yui_3_5_1_1_1734710748560_2811">
+                <h4>Gray Formal Suit</h4>
+                <p>$130</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" src="https://ae01.alicdn.com/kf/HTB12iUaQFXXXXbqXXXXq6xXFXXXb/Latest-Coat-Pant-Designs-Light-Blue-Men-Wedding-Suits-Slim-Fit-Skinny-3-Piece-Tuxedo-Custom.jpg"  alt="Suit 1">
+                <h4>Blue Business Suit</h4>
+                <p>$140</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://tse4.mm.bing.net/th?id=OIP.JkaLX3AHNKpuzThvHpZ-UQHaHa&amp;pid=Api&amp;P=0&amp;h=220" id="yui_3_5_1_1_1734709049130_700" alt="Suit 2">
+                <h4>Informal Business Suit</h4>
+                <p>$140</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Shalwar Kameez -->
+        <h3>Shalwar Kameez</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class=""  src="https://www.junaidjamshed.com/media/catalog/product/1/9/1949_1__1.jpg?quality=80&amp;bg-color=255,255,255&amp;fit=bounds&amp;height=640&amp;width=640&amp;canvas=640:640" id="img" style="width: 125px; height: 125px;">
+                <h4>White Shalwar Kameez</h4>
+                <p>$50</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://www.junaidjamshed.com/media/catalog/product/j/j/jjks-30778-r15_6__2.jpg?quality=80&amp;bg-color=255,255,255&amp;fit=bounds&amp;height=755&amp;width=589&amp;canvas=589:755" id="img" style="width: 125px; height: 161px;" alt="Shalwar Kameez 2">
+                <h4>Black Shalwar Kameez</h4>
+                <p>$60</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://i.etsystatic.com/37036729/r/il/389953/4274585066/il_fullxfull.4274585066_fayr.jpg" id="img" style="width: 125px; height: 188px;" alt="Shalwar Kameez 3">
+                <h4>Blue Shalwar Kameez</h4>
+                <p>$55</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://i.etsystatic.com/28504096/r/il/269727/3680077458/il_570xN.3680077458_a62x.jpg" id="img" style="width: 125px; height: 125px;" alt="Shalwar Kameez 3">
+                <h4>Gray Shalwar Kameez</h4>
+                <p>$55</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Shoes -->
+        <h3>Shoes And Sandals</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class=""   src="https://cf.shopee.ph/file/e71b398100129fe37e9cd08e1ccbf367" id="img" style="width: 125px; height: 125px;" alt="Shoes 1">
+                <h4>Formal White Shoes</h4>
+                <p>$80</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class=""   alt="" style="width: 187.5px; height: 180px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://tse2.mm.bing.net/th?id=OIP.NbQj4bOE9GfExADxS502wgHaHa&amp;pid=Api&amp;P=0&amp;h=220" id="yui_3_5_1_1_1734715033952_1988" alt="Shoes 2">
+                <h4>Brown Leather Shoes</h4>
+                <p>$85</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class=""   alt="" style="width: 171.6px; height: 180px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://tse3.mm.bing.net/th?id=OIP.NmeV1RHdgYixOWBBbGs36QHaHa&amp;pid=Api&amp;P=0&amp;h=220" id="yui_3_5_1_1_1734716524904_741" alt="Shoes 3">
+                <h4>Brown Shoes</h4>
+                <p>$70</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://ae01.alicdn.com/kf/HTB1CR5kPVXXXXbIXFXXq6xXFXXXf/2017-Hot-Sale-Men-Summer-Shoes-Breathable-Male-Casual-Shoes-Fashion-Chaussure-Homme-Soft-Zapatos-Hombre.jpg" id="img" style="width: 125px; height: 125px;" alt="Shoes 3">
+                <h4>White Shoes</h4>
+                <p>$70</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Watches -->
+        <h3>Watches</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img  style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://ak1.ostkcdn.com/images/products/8904353/Swiss-Army-Mens-241500-Chrono-Classic-White-Dial-White-Leather-Strap-Watch-770301c2-5bf0-42e0-bc85-66e8dcc2db78_600.jpg" id="img" style="width: 125px; height: 125px;" alt="Watch 1">
+                <h4>Analog Watch</h4>
+                <p>$100</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img  style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://tse4.mm.bing.net/th?id=OIP.eUs_WSdjg0Mpf9LWs3nuiQHaHa&amp;pid=Api&amp;P=0&amp;h=220" id="img" style="width: 125px; height: 126px;" alt="Watch 2">
+                <h4>Digital Watch</h4>
+                <p>$90</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://media-photos.depop.com/b1/45280131/1703587877_9ff36f4cf7da4128a8f5b16d672c52ea/P0.jpg" id="img" style="width: 125px; height: 125px;" alt="Watch 3">
+                <h4>Luxury Watch</h4>
+                <p>$250</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img style="width: 250px; height: 200px; margin-top: 0px; margin-left: 0px; display: block;" class="" src="https://5.imimg.com/data5/ANDROID/Default/2020/11/IP/GF/EL/93318731/product-jpeg-500x500.jpg" id="img" style="width: 125px; height: 122px;" alt="Watch 3">
+                <h4>Luxury Watch</h4>
+                <p>$250</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+             <div class="main">
+        <div class="share-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px" height="30px" fill="currentColor"
+                class="w-6 h-6">
+                <path fill-rule="evenodd"
+                    d="M15.75 4.5a3 3 0 11.825 2.066l-8.421 4.679a3.002 3.002 0 010 1.51l8.421 4.679a3 3 0 11-.729 1.31l-8.421-4.678a3 3 0 110-4.132l8.421-4.679a3 3 0 01-.096-.755z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="up">
+            <button data-toggle1="false" class="card1">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256"
+                    width="30px" height="30px" fill-rule="nonzero" class="instagram">
+                    <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                        font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <g transform="scale(8,8)">
+                            <path
+                                d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+            <button data-toggle2="false" class="card2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px" class="twitter">
+                    <path
+                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="down">
+            <button data-toggle3="false" class="card3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px" class="github">
+                    <path
+                        d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
+                    </path>
+                </svg>
+            </button>
+            <button data-toggle4="false" class="card4">
+                <svg height="30px" width="30px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="discord">
+                    <path
+                        d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+          
+  
+    <script>
+        const shareBtn = document.querySelector(".share-btn");
+        const card1 = document.querySelector(".card1");
+        const card2 = document.querySelector(".card2");
+        const card3 = document.querySelector(".card3");
+        const card4 = document.querySelector(".card4");
+
+        shareBtn.addEventListener("click", () => {
+            if (card1.getAttribute("data-toggle1") === "true") {
+                card1.setAttribute("data-toggle1", false);
+                card2.setAttribute("data-toggle2", false);
+                card3.setAttribute("data-toggle3", false);
+                card4.setAttribute("data-toggle4", false);
+            } else if (card1.getAttribute("data-toggle1") === "false") {
+                card1.setAttribute("data-toggle1", true);
+                card2.setAttribute("data-toggle2", true);
+                card3.setAttribute("data-toggle3", true);
+                card4.setAttribute("data-toggle4", true);
+            }
+        });
+
+    </script>
+    </footer>
+</body>
+</html>
